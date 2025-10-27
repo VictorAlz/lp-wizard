@@ -35,12 +35,13 @@ export const Footer = () => {
           {/* Social Media */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Redes Sociais</h4>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-accent/20 flex items-center justify-center transition-colors group"
+                aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 group-hover:text-accent transition-colors" />
               </a>
@@ -49,8 +50,18 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-accent/20 flex items-center justify-center transition-colors group"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 group-hover:text-accent transition-colors" />
+              </a>
+              <a
+                href="https://business.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-accent/20 flex items-center justify-center transition-colors group"
+                aria-label="Google Meu Negócio"
+              >
+                <MapPin className="w-5 h-5 group-hover:text-accent transition-colors" />
               </a>
             </div>
           </div>

@@ -3,6 +3,7 @@ import { ProblemSolution } from "@/components/sections/ProblemSolution";
 import { Benefits } from "@/components/sections/Benefits";
 import { Bonuses } from "@/components/sections/Bonuses";
 import { About } from "@/components/sections/About";
+import { Team } from "@/components/sections/Team";
 import { LeadForm } from "@/components/sections/LeadForm";
 import { Footer } from "@/components/sections/Footer";
 
@@ -14,6 +15,7 @@ const Index = () => {
       <Benefits />
       <Bonuses />
       <About />
+      <Team />
       <LeadForm />
       <Footer />
     </div>

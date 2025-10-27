@@ -15,12 +15,21 @@ export const Hero = () => {
       </div>
 
       <div className="container relative z-10 px-4 py-20 mx-auto text-center">
+        {/* Logo Placeholder */}
+        <div className="flex justify-center mb-8">
+          <div className="w-24 h-24 md:w-32 md:h-32 bg-white/10 backdrop-blur-sm rounded-2xl border-2 border-white/20 flex items-center justify-center hover:scale-105 transition-transform">
+            <span className="text-white text-xl md:text-2xl font-bold">
+              CASE <span className="text-accent">EJ</span>
+            </span>
+          </div>
+        </div>
+
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-sm">
           <Sparkles className="w-4 h-4 text-accent" />
           <span className="text-sm font-medium text-accent">FEMASS Macaé-RJ</span>
         </div>
 
-        <h1 className="mb-6 text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
+        <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight px-4">
           Aprenda Tecnologia na Prática:
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary">
@@ -30,19 +39,21 @@ export const Hero = () => {
           que Macaé Precisava
         </h1>
 
-        <p className="mb-8 text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto">
+        <p className="mb-8 text-base md:text-lg text-primary-foreground/80 max-w-3xl mx-auto px-4">
           Somos a <strong className="text-accent">CASE EJ</strong>. Cursos de tecnologia com foco em inovação e projetos reais,
           aproximando você do mercado.
         </p>
 
-        <Button
-          onClick={scrollToForm}
-          size="lg"
-          className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-xl shadow-2xl animate-pulse-glow group"
-        >
-          Quero garantir minha vaga
-          <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-        </Button>
+        <div className="flex justify-center px-4">
+          <Button
+            onClick={scrollToForm}
+            size="lg"
+            className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-xl shadow-2xl animate-pulse-glow group"
+          >
+            Quero garantir minha vaga
+            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {[
