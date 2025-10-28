@@ -26,7 +26,7 @@ export const Hero = () => {
 
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-sm">
           <Sparkles className="w-4 h-4 text-accent" />
-          <span className="text-sm font-medium text-accent">FEMASS Macaé-RJ</span>
+          <span className="text-sm font-medium text-accent">Inovação em IA e Tecnologia</span>
         </div>
 
         <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight px-4">
