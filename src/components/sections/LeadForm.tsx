@@ -14,21 +14,35 @@ export const LeadForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  try {
+    const response = await fetch("http://localhost:5000/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) throw new Error("Erro ao enviar dados");
 
     toast({
-      title: "Inscrição realizada! 🎉",
+      title: "Inscrição realizada!",
       description: "Nossa equipe entrará em contato em breve via WhatsApp.",
     });
 
     setFormData({ name: "", email: "", whatsapp: "" });
-    setIsSubmitting(false);
-  };
+  } catch (error) {
+    toast({
+      title: "Erro ao enviar o formulário",
+      description: "Tente novamente em alguns instantes.",
+      variant: "destructive",
+    });
+  }
+
+  setIsSubmitting(false);
+};
 
   return (
     <section id="lead-form" className="py-20 px-4 bg-gradient-to-br from-muted/50 to-background">
